@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome to FORSA BLUD</title>
+
+    <script type="text/javascript">
+        let flag = 1;
+
+        function f1() {
+            alert('Terima kasih telah menggunakan FORSA BLUD');
+
+            // Ganti isi halaman jadi halaman terima kasih
+            document.body.innerHTML = `
+                <div style="display:flex; justify-content:center; align-items:center; height:100vh; background:black; color:white; font-family:courier new;">
+                    <h1>TERIMA KASIH</h1>
+                </div>
+            `;
+        }
+
+        function f() {
+            let Bn = document.getElementById("Bn");
+
+            if (flag == 1) {
+                Bn.style.top = "80px";
+                Bn.style.left = "100px";
+                flag = 2;
+            } else if (flag == 2) {
+                Bn.style.top = "130px";
+                Bn.style.left = "50px";
+                flag = 3;
+            } else if (flag == 3) {
+                Bn.style.top = "0px";
+                Bn.style.left = "0px";
+                flag = 1;
+            }
+        }
+    </script>
+</head>
+
+<body bgcolor="black" style="text-align:center; color:white; font-family:courier new;">
+
+    <h1 style="color:red;">Welcome to FORSA BLUD</h1>
+
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSppiSJPs3jwUDx-9_6VP7WUoBig-6alpTCXQ&s"
+         alt="Mahakarya" width="300">
+
+    <h2>Mau menggunakan aplikasi</h2>
+    <h2>FORSA BLUD?</h2>
+
+    <!-- Tombol Mau -->
+    <div id="Bn" style="position:relative; top:0px; left:0px; margin-top:20px;">
+        <input type="button" value="Mau" onmouseover="f()" />
+    </div>
+
+    <!-- Tombol Tidak -->
+    <div style="margin-top:10px;">
+        <input type="button" value="Tidak" onclick="f1()" />
+    </div>
+
+</body>
+</html>
